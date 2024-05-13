@@ -1,0 +1,234 @@
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins';
+}
+:root{
+    --bg-color: white;
+    --second-bg-color: beige;
+    --text-color: black;
+    --main-color: brown;
+}
+body{
+    background: var(--bg-color);
+    color: black;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(255, 192, 203);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.logo{
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition; .4s ease-in-out;
+    text-decoration: none;
+}
+.logo:hover{
+    text-shadow: 0 0 25px var(--main-color),
+                 0 0 50px var(--main-color),
+                 0 0 100px var(--main-color);
+}
+.logo span{
+    text.shadow: 0 0 25px var(--main-color);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: .1s ease;
+}
+.navbar a:hover,
+.navbar a:active{
+    color: blue;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15;
+}
+.homecontent{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.homecontent h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.homecontent h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+.homeing{
+    border-radius: 30%;
+}
+.homeing img{
+    position: relative;
+    display: flex;
+    top: 3rem;
+    width: 28vw;
+    border-radius: 70%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.homeing img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.homecontent p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+.btnbox{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btnbox a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: pink;
+    border: 2px black;
+    border-radius: 8px;
+    font-size: 19px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px; 
+    z-index: 1;
+    overflow: hidden;
+}
+.btnbox a:nth-child(2) {
+    background: transparent;
+    color: pink;
+}
+.btnbox a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(120, 180, 221);
+    z-index: -1;
+    transition: .5s;
+}
+.btnbox a:hover::before{
+    width: 100%;
+}
+.animationtext{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.animationtext span{
+    position: relative;
+}
+.animationtext span::before{
+    content: "Photos Dump";
+    color: pink;
+    animation: words 20s infinite;
+}
+.animationtext span::after{
+    content: "";
+    background-color: burlywood;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px burlywood;
+    right: -8px;
+    animation: cursor .6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid grey;
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: "Music Fav"
+    }
+    41%,
+    60%{
+        content: "Memo Text"
+    }
+    61%,
+    80%{
+        content: "Photos Dump"
+    }
+    81%,
+    100%{
+        content: All;
+    }
+}
+@keyframes typing{
+    10%
+    15%
+    30%
+    35%
+    50%
+    55%
+    70%
+    75%
+    90%
+    95%{
+        width: 0,
+    }
+    5%
+    20%
+    25%
+    40%
+    45%
+    60%
+    65%
+    80%
+    85%{
+        width: calc(100% + 8px);
+    }
+}
